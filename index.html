@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CryptoStart - your gateway to learning about cryptocurrency, blockchain, and digital finance." />
+  <meta name="keywords" content="Crypto, Blockchain, DeFi, NFT, Cryptocurrency Education" />
+  <meta name="author" content="Zhumasultan Kobzhanov" />
+  <title>CryptoStart - Cryptocurrency Education Platform</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom Scroll + Masthead Animation -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .masthead {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: background 0.5s ease-in-out;
+    }
+  </style>
+<style>
+.timeline > li:last-child::after {
+  display: none !important;
+}
+</style>
+<style>
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+</style>
+</head>
+    <body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#page-top" style="display: flex; align-items: center; height: 80px;">
+      <img src="assets/img/logo.png" alt="CryptoStart Logo" style="max-height: 40px; transform: scale(7); transform-origin: left center; margin-left: -10px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive">
+      Menu <i class="fas fa-bars ms-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+  <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+  <li class="nav-item"><a class="nav-link" href="#live-prices">Live Prices</a></li>
+  <li class="nav-item"><a class="nav-link" href="#facts">Awesome Facts</a></li>
+  <li class="nav-item"><a class="nav-link" href="#crypto-blog">Crypto Blog</a></li>
+  <li class="nav-item"><a class="nav-link" href="#ai-assistant">AI Assistant</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+    </div>
+  </div>
+</nav>
+        <!-- Masthead-->
+        <header class="masthead" style="background-image: url('assets/img/image.png'); position: relative;">
+            <div class="container">
+                <div class="masthead-subheading">Welcome to Crypto Start!</div>
+                <div class="masthead-heading text-uppercase" style="font-size: 3rem;">An exciting adventure into the world of modern finance</div>
+<a class="btn btn-primary btn-xl text-uppercase" href="#features">Enjoy the Future</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="features">
+            <div class="container">
+                <div class="text-center">
+  <h2 class="section-heading text-uppercase">Features</h2>
+  <h3 class="section-subheading text-muted">Our project offers the following features and many more:</h3>
+                </div>
+                <div class="row text-center">
+  <div class="col-md-4">
+    <div class="text-center">
+      <i class="bi bi-graph-up" style="font-size: 3rem; color: #ffc107;"></i>
+      <h4 class="my-3">Live Price Tracker</h4>
+      <p class="text-muted">Stay updated with real-time cryptocurrency prices and market trends.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="text-center">
+      <i class="bi bi-robot" style="font-size: 3rem; color: #ffc107;"></i>
+      <h4 class="my-3">AI Crypto Assistant</h4>
+      <p class="text-muted">Get insights and recommendations powered by artificial intelligence.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="text-center">
+      <i class="bi bi-mortarboard" style="font-size: 3rem; color: #ffc107;"></i>
+      <h4 class="my-3">Free to Learn</h4>
+      <p class="text-muted">Access a wealth of resources to learn about cryptocurrencies at no cost.</p>
+    </div>
+  </div>
+            </div>
+        </section>
+<!-- Portfolio Grid -->
+<section class="page-section bg-light" id="live-prices">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Live Crypto Prices</h2>
+      <h3 class="section-subheading text-muted">Track real-time prices of top cryptocurrencies</h3>
+    </div>
+<div class="row">
+  <!-- BTC -->
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <div class="portfolio-item">
+      <h4 class="text-center" style="color:gold;">Bitcoin (BTC)</h4>
+      <div id="tradingview_btc" style="height:220px"></div>
+    </div>
+  </div>
+
+  <!-- ETH -->
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <div class="portfolio-item">
+      <h4 class="text-center" style="color:gold;">Ethereum (ETH)</h4>
+      <div id="tradingview_eth" style="height:220px"></div>
+    </div>
+  </div>
+
+  <!-- SOL -->
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <div class="portfolio-item">
+      <h4 class="text-center" style="color:gold;">Solana (SOL)</h4>
+      <div id="tradingview_sol" style="height:220px"></div>
+    </div>
+  </div>
+
+  <!-- BNB -->
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <div class="portfolio-item">
+      <h4 class="text-center" style="color:gold;">Binance Coin (BNB)</h4>
+      <div id="tradingview_bnb" style="height:220px"></div>
+    </div>
+  </div>
+
+  <!-- XRP -->
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <div class="portfolio-item">
+      <h4 class="text-center" style="color:gold;">XRP</h4>
+      <div id="tradingview_xrp" style="height:220px"></div>
+    </div>
+  </div>
+
+  <!-- ADA -->
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <div class="portfolio-item">
+      <h4 class="text-center" style="color:gold;">Cardano (ADA)</h4>
+      <div id="tradingview_ada" style="height:220px"></div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<!-- Awesome Facts -->
+<section class="page-section bg-light" id="facts">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Awesome Facts</h2>
+      <h3 class="section-subheading text-muted">Discover some intriguing facts about the cryptocurrency world.</h3>
+    </div>
+    <ul class="timeline">
+      
+      <!-- Fact 1 -->
+      <li>
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="assets/img/about/pizza.jpg" alt="Bitcoin Pizza">
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4>May 22, 2010</h4>
+            <h4 class="subheading">The Most Expensive Pizzas Ever</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="text-muted">Laszlo Hanyecz made the first real-world transaction with Bitcoin by purchasing two pizzas for 10,000 BTC, now valued at over $630 million.</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- Fact 2 -->
+      <li class="timeline-inverted">
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="assets/img/about/satoshi_wallet.jpg" alt="Satoshi's Wallet">
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4>Untouched Fortune</h4>
+            <h4 class="subheading">Satoshi Nakamoto's Wallet</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="text-muted">The wallet believed to belong to Bitcoin's creator, Satoshi Nakamoto, contains over $30 billion worth of BTC and remains untouched to this day.</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- Fact 3 -->
+      <li>
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="assets/img/about/global_currency.jpg" alt="Global Currency">
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4>Borderless Transactions</h4>
+            <h4 class="subheading">Bitcoin as a Global Currency</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="text-muted">Bitcoin operates without borders, allowing transactions to occur globally without the need for intermediaries like banks.</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- Fact 4 -->
+      <li class="timeline-inverted">
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="assets/img/about/lost_bitcoins.jpg" alt="Lost Bitcoins">
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4>Lost Bitcoins</h4>
+            <h4 class="subheading">Over $140 Billion Forever Inaccessible</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="text-muted">It's estimated that about 20% of all bitcoins are permanently lost. That's over $140 billion locked away in wallets whose owners forgot passwords, lost keys, or passed away without sharing access.</p>
+          </div>
+        </div>
+      </li>
+
+<!-- Fact 5: Final -->
+<li>
+  <div class="timeline-image">
+    <img class="rounded-circle img-fluid" src="assets/img/about/journey.jpg" alt="Start Journey">
+  </div>
+  <div class="timeline-panel">
+    <div class="timeline-heading">
+      <h4>Get Started</h4>
+      <h4 class="subheading">Let Your Journey Begin!</h4>
+    </div>
+    <div class="timeline-body">
+      <p class="text-muted">This is just the beginning — dive into the world of cryptocurrency, education, innovation and freedom. CryptoStart will guide you through every step.</p>
+    </div>
+  </div>
+</li>
+
+    </ul>
+  </div>
+</section>
+<!-- Crypto Blog -->
+<section class="page-section bg-light" id="crypto-blog">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Crypto Blog</h2>
+      <h3 class="section-subheading text-muted">Dive into the world of crypto knowledge.</h3>
+    </div>
+    <div class="row">
+
+      <!-- Bitcoin -->
+      <div class="col-lg-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="assets/img/blog/bitcoin.jpg" alt="Bitcoin" />
+          <h4>What is Bitcoin?</h4>
+          <p class="text-muted">Explore the origins and role of the first and most famous cryptocurrency.</p>
+          <a class="btn btn-dark btn-social mx-2" href="https://en.wikipedia.org/wiki/Bitcoin" target="_blank">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blockchain -->
+      <div class="col-lg-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="assets/img/blog/blockchain.jpg" alt="Blockchain" />
+          <h4>What is Blockchain?</h4>
+          <p class="text-muted">Understand the decentralized technology that powers crypto.</p>
+          <a class="btn btn-dark btn-social mx-2" href="https://en.wikipedia.org/wiki/Blockchain" target="_blank">Read More</a>
+        </div>
+      </div>
+
+      <!-- Altcoins -->
+      <div class="col-lg-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="assets/img/blog/altcoins.jpg" alt="Altcoins" />
+          <h4>What are Altcoins?</h4>
+          <p class="text-muted">Discover alternatives to Bitcoin and their unique features.</p>
+          <a class="btn btn-dark btn-social mx-2" href="https://en.wikipedia.org/wiki/Altcoin" target="_blank">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- AI Assistant Section -->
+<section class="page-section bg-light" id="ai-assistant">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">AI Assistant</h2>
+      <h3 class="section-subheading text-muted">Your smart crypto companion – always here to help you in the bottom-right corner.</h3>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <img class="img-fluid rounded shadow-lg mb-4" src="assets/img/blog/assistant.jpg" alt="AI Assistant" style="max-width: 300px;">
+      </div>
+      <div class="col-md-10">
+        <p class="text-muted text-center" style="font-size: 1.1rem; max-width: 800px; margin: auto;">
+          💬 <strong>Need help?</strong> Just click the floating chat icon in the bottom-right corner!<br>
+          Our <b>AI Assistant</b> is available 24/7 to answer all your cryptocurrency questions – whether you're curious about Bitcoin, need help with exchanges, or want to understand DeFi. No registration, no hassle – just ask away!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chatbase widget open script -->
+<script>
+  function openChatbase() {
+    const widget = document.querySelector("iframe[src*='chatbase']");
+    if (widget) {
+      widget.contentWindow.postMessage({ event: 'openChat' }, '*');
+    }
+  }
+</script>
+<!-- Contact-->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h3 class="section-subheading text-muted">Feel free to reach out for questions, collaborations, or feedback.</h3>
+        </div>
+
+        <form id="contactForm" data-sb-form-api-token="a3251b7c-1eae-4d98-99af-3508fef74a41">
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- Name input-->
+                        <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    </div>
+                    <div class="form-group">
+                        <!-- Email address input-->
+                        <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                    </div>
+                    <div class="form-group mb-md-0">
+                        <!-- Phone number input-->
+                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group form-group-textarea mb-md-0">
+                        <!-- Message input-->
+                        <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit success message-->
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center text-white mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                </div>
+            </div>
+            <!-- Submit error message-->
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+            <!-- Submit Button-->
+            <div class="text-center">
+                <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer py-4" style="background-color: #111;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-12 text-white">
+                <p class="mb-0">Copyright © CryptoStart 2025 | Zhumasultan Kobzhanov | Student ID: 35464659</p>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Threads
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Illustration
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Explore
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Graphic Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Finish
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Identity
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Lines
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Branding
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Southwest
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Website Design
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+<!-- Project details-->
+<h2 class="text-uppercase">CryptoStart Platform</h2>
+<p class="item-intro text-muted">Interactive education about the world of cryptocurrencies.</p>
+<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="CryptoStart Preview" />
+<p>
+CryptoStart is an educational web platform designed to teach users about cryptocurrencies, blockchain, DeFi, and NFT technology. The project is built with HTML, CSS, and JavaScript, hosted on an AWS EC2 server running Ubuntu 22.04. All site components are modular, fully responsive, and visually styled in a black-gold-white color scheme to reflect a premium digital finance aesthetic.
+</p>
+<ul class="list-inline">
+    <li><strong>Client:</strong> University Project</li>
+    <li><strong>Category:</strong> Educational Platform</li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+    <i class="fas fa-xmark me-1"></i>
+    Close Project
+</button>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Bootstrap core JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core theme JS -->
+<script src="js/scripts.js"></script>
+
+<!-- SB Forms -->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+<!-- TradingView Widget Script -->
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+<script>
+  function waitForTradingView() {
+    if (typeof TradingView === "undefined") {
+      setTimeout(waitForTradingView, 500);
+      return;
+    }
+
+    const configs = [
+      { id: "tradingview_btc", symbol: "BINANCE:BTCUSDT" },
+      { id: "tradingview_eth", symbol: "BINANCE:ETHUSDT" },
+      { id: "tradingview_sol", symbol: "BINANCE:SOLUSDT" },
+      { id: "tradingview_bnb", symbol: "BINANCE:BNBUSDT" },
+      { id: "tradingview_xrp", symbol: "BINANCE:XRPUSDT" },
+      { id: "tradingview_ada", symbol: "BINANCE:ADAUSDT" }
+    ];
+
+    configs.forEach(cfg => {
+      new TradingView.widget({
+        container_id: cfg.id,
+        width: "100%",
+        height: 220,
+        symbol: cfg.symbol,
+        interval: "D",
+        theme: "dark",
+        style: "1",
+        locale: "en",
+        hide_legend: true
+      });
+    });
+  }
+
+  window.addEventListener("load", waitForTradingView);
+</script>
+
+<!-- Chatbase Floating AI Assistant -->
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "Ue8mO0RIX78yngP0rmdiR"
+  }
+</script>
+<script src="https://www.chatbase.co/embed.min.js" chatbotId="Ue8mO0RIX78yngP0rmdiR" defer></script>
+
+<!-- ScrollSpy / Navbar shrink -->
+<script>
+  window.addEventListener('DOMContentLoaded', event => {
+    const navbarShrink = function () {
+      const navbarCollapsible = document.body.querySelector('#mainNav');
+      if (!navbarCollapsible) return;
+      if (window.scrollY === 0) {
+        navbarCollapsible.classList.remove('navbar-shrink');
+      } else {
+        navbarCollapsible.classList.add('navbar-shrink');
+      }
+    };
+
+    navbarShrink();
+    document.addEventListener('scroll', navbarShrink);
+
+    const mainNav = document.body.querySelector('#mainNav');
+    if (mainNav) {
+      new bootstrap.ScrollSpy(document.body, {
+        target: '#mainNav',
+        rootMargin: '0px 0px -40%',
+      });
+    }
+  });
+</script>
+
+<!-- Start Chat Button Logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("start-chat-button");
+
+    if (btn) {
+      btn.addEventListener("click", function () {
+        if (window.ChatbaseAPI && typeof window.ChatbaseAPI.toggleChat === "function") {
+          window.ChatbaseAPI.toggleChat();
+        } else {
+          let attempts = 0;
+          const interval = setInterval(() => {
+            if (window.ChatbaseAPI && typeof window.ChatbaseAPI.toggleChat === "function") {
+              window.ChatbaseAPI.toggleChat();
+              clearInterval(interval);
+            } else {
+              attempts++;
+              if (attempts >= 20) clearInterval(interval);
+            }
+          }, 500);
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
