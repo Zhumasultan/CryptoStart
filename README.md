@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CryptoStart: Cryptocurrency Educational Platform
 
 ## Project Overview
@@ -236,3 +237,6 @@ Together, these scripts enhance the website’s practical value, interactivity, 
 
 
 I also want to add that I put my soul into this site and made the best design, and now I plan to use it not only for studying, but also for real purposes. I also plan to improve it, find users and launch advertising for monetization and earnings.
+=======
+# CryptoStart
+>>>>>>> ce0d7d8147c5c181e9236c91498e31bc6de7d461
